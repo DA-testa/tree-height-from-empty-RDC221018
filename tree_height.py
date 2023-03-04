@@ -40,9 +40,9 @@ def main():
     if "F" in text:
         filename = input()
         filepath = os.path.join("DA-testa", "tree-height-from-empty-RDC221018", "test", filename)
-        if not os.path.isfile(filepath):
-            print(f"File does not exist")
-            exit()
+        #if not os.path.isfile(filepath):
+            #print(f"File does not exist")
+            #exit()
         with open(filepath, "r") as f:
             content = f.read()
         lines = content.split('\n')
