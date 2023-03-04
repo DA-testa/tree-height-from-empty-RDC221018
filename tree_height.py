@@ -53,7 +53,14 @@ def main():
             f = open(filename, "r")
             n = f.readline()
             parents = f.readline()
-        print(compute_height(n, parents))
+            for i in range(n):
+                if parents[i] < -1:
+                    return
+                if parents[i] == -1:
+                    continue
+                if i == parents[i]:
+                    return
+            print(compute_height(n, parents))
     pass
 
 
