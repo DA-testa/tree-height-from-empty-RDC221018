@@ -39,7 +39,7 @@ def main():
         print(compute_height(n, parents))
     if "F" in text:
         filename = input()
-        filepath = os.path.join("DA-testa", "tree-height-from-empty-RDC221018", "test", filename)
+        filepath = os.path.join("DA-testa", "tree_height_empty_py2", "test", filename)
         #if not os.path.isfile(filepath):
             #print(f"File does not exist")
             #exit()
