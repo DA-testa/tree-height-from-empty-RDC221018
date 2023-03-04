@@ -1,6 +1,7 @@
 import sys
 import threading
 import numpy
+import os
 
 
 def compute_height(n, parents):
@@ -35,6 +36,18 @@ def main():
                 continue
             if i == parents[i]:
                 return
+        print(compute_height(n, parents))
+    if "F" in text:
+        filename = input()
+        filepath = os.path.join("tree-height-from-empty-asd", "test", filename)
+        if not os.path.isfile(filepath):
+            print(f"File does not exist")
+            exit()
+        with open(filepath, "r") as f:
+            content = f.read()
+        lines = content.split('\n')
+        n = int(lines[0])
+        parents = [int(x) for x in lines[1].split()]
         print(compute_height(n, parents))
     pass
 
