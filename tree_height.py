@@ -24,20 +24,18 @@ def compute_height(n, parents):
 
 
 def main():
-    n = int(input())
-    parents = list(map(int, input().split()))
-
-    for i in range(n):
-        if parents[i] < -1:
-            return
-
-        if parents[i] == -1:
-            continue
-
-        if i == parents[i]:
-            return
-    
-    print(compute_height(n, parents))
+    text = input()
+    if "I" in (text):
+        n = int(input())
+        parents = list(map(int, input().split()))
+        for i in range(n):
+            if parents[i] < -1:
+                return
+            if parents[i] == -1:
+                continue
+            if i == parents[i]:
+                return
+        print(compute_height(n, parents))
     pass
 
 
