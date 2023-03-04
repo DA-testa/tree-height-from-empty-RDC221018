@@ -52,7 +52,9 @@ def main():
             filename = "test/" + filename
             f = open(filename, "r")
             n = f.readline()
+            n = int(n)
             parents = f.readline()
+            parents = list(map(int, parents.split()))
             for i in range(n):
                 if parents[i] < -1:
                     return
